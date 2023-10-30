@@ -1,0 +1,68 @@
+body {
+  background-color: black;
+  color: white;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+
+}
+
+img{
+  width: 30%;
+  height: auto;
+}
+
+.mood{
+  margin-bottom: 10px;
+}
+
+.limit{
+  margin-top: 10px;
+}
+
+.submitButton{
+  margin-top: 20px;
+  font-size: 17px;
+  height: 200px;
+  width: 100px;
+  margin-bottom: 20px;
+
+}
+
+.returnPlaylists{
+  text-align: left;
+  margin-left: 300px;
+  clear: left;
+  margin-top: 50px;
+}
+
+.returnTracks{
+  text-align: left;
+}
+
+.cover{
+border-radius: 50%;
+  width: 10%;
+  height: auto;
+  margin-right: 1000px;
+  float: right;
+  margin-top: -160px;
+}
+
+a:link{
+  color: #64C437;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #C7FFAD;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+h1{
+  font-size: 50px;
+}
+
+
