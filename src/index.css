@@ -7,6 +7,10 @@ body {
 
 }
 
+.playlist-radio{
+  margin-left: 1em;
+}
+
 img{
   width: 30%;
   height: auto;
@@ -14,34 +18,26 @@ img{
 
 .mood{
   margin-bottom: 10px;
+  width: 12em;
 }
 
 .limit{
-  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 5em;
 }
 
-.submitButton{
-  margin-top: 20px;
-  font-size: 17px;
-  height: 200px;
-  width: 100px;
-  margin-bottom: 20px;
-
+.type{
+  margin-bottom: 10px;
+  width: 30em;
 }
 
-.returnPlaylists{
-  text-align: left;
-  margin-left: 300px;
-  clear: left;
-  margin-top: 50px;
-}
 
 .returnTracks{
   text-align: left;
 }
 
 .cover{
-border-radius: 50%;
+
   width: 10%;
   height: auto;
   margin-right: 1000px;
@@ -49,20 +45,525 @@ border-radius: 50%;
   margin-top: -160px;
 }
 
-a:link{
-  color: #64C437;
-  background-color: transparent;
-  text-decoration: none;
-}
-
-a:visited {
-  color: #C7FFAD;
-  background-color: transparent;
-  text-decoration: none;
+.image-cover{
+  width: 16em;
+  margin-top: 0.75em;
 }
 
 h1{
   font-size: 50px;
 }
+
+.card{
+  width: 60em;
+  background-color: black;
+  color: white;
+  margin-top: 5em;
+  display: flex;
+  justify-content: center; /* Horizontale Zentrierung */
+  align-items: center;
+
+}
+
+.playlist-p{
+  font-family: 'Lilita One', sans-serif;
+  font-weight: bold;
+  font-size:x-large;
+}
+
+.logo-font{
+  font-family: 'Lilita One', sans-serif;
+  font-size: 5em;
+}
+
+
+.custom-radio .form-check-input:checked {
+  background-color: #1DB954;
+  border-color: #1DB954;
+}
+
+.howMood{
+  font-weight: bold;
+  font-size:large;
+}
+
+.card-col{
+  display: flex;
+  justify-content: center;
+  margin-top: -2em;
+}
+
+.boldText{
+  font-weight: bold;
+}
+
+
+
+
+/* happy */
+body.happy{
+  background-color: #F4E869;
+}
+
+.happy-card{
+  background-color: #EC8F5E;
+}
+
+.happy-custom-radio .form-check-input:checked {
+  background-color: #EC8F5E;
+  border-color: #EC8F5E;
+}
+.happy-button{
+  background-color: #EC8F5E;
+  border-color: #F4E869;
+  color: #F4E869;
+}
+.happy-button:hover{
+  background-color: #F4E869;
+  border-color: #F4E869;
+  color: #EC8F5E;
+}
+
+.happy-button-submit:hover{
+  background-color: #EC8F5E;
+  border-color: #F4E869;
+  color: #F4E869;
+}
+
+.happy-button-submit{
+  background-color: #EC8F5E;
+  border-color: #EC8F5E;
+  color: #F4E869;
+}
+
+.happy-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #EC8F5E;
+  color: #F4E869;
+  border-color: #EC8F5E;
+}
+
+.happy-scroll-to-top-button:hover {
+  background-color: #EC8F5E;
+  color: #F4E869;
+  border-color: #F4E869;
+}
+
+.happy-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------------------------------*/
+
+
+/* sad */
+body.sad{
+  background-color: #45474B
+}
+
+.sad-card{
+  background-color: black;
+}
+
+.sad-custom-radio .form-check-input:checked {
+  background-color: black;
+  border-color: black;
+}
+.sad-button{
+  background-color: black;
+  border-color: #45474B;
+  color: white;
+}
+.sad-button:hover{
+  background-color: #45474B;
+  border-color: #45474B;
+  color: black;
+}
+
+.sad-button-submit:hover{
+  background-color: black;
+  border-color: #45474B;
+  color: white;
+}
+
+.sad-button-submit{
+  background-color: black;
+  border-color: black;
+  color: white;
+}
+
+.sad-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: black;
+  color: #45474B;
+  border-color: black;
+}
+
+.sad-scroll-to-top-button:hover {
+  background-color: black;
+  color: #45474B;
+  border-color: #45474B;
+}
+
+.sad-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------------------------------*/
+
+
+/* exited */
+body.exited{
+  background-color: #D61355;
+}
+
+.exited-card{
+  background-color: #001B79;
+}
+
+.exited-custom-radio .form-check-input:checked {
+  background-color: #001B79;
+  border-color: #001B79;
+}
+.exited-button{
+  background-color: #001B79;
+  border-color: #D61355;
+  color: #D61355;
+}
+.exited-button:hover{
+  background-color: #D61355;
+  border-color: #D61355;
+  color: #001B79;
+}
+
+.exited-button-submit:hover{
+  background-color: #001B79;
+  border-color: #D61355;
+  color: white;
+}
+
+.exited-button-submit{
+  background-color: #001B79;
+  border-color: #001B79;
+  color: white;
+}
+
+.exited-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #001B79;
+  color: #D61355;
+  border-color: #001B79;
+}
+
+.exited-scroll-to-top-button:hover {
+  background-color: #001B79;
+  color: #D61355;
+  border-color: #D61355;
+}
+
+.exited-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------------------------------*/
+
+
+/* anxious */
+body.anxious{
+  background-color: #9F0D7F;
+}
+
+.anxious-card{
+  background-color: #45474B;
+}
+
+.anxious-custom-radio .form-check-input:checked {
+  background-color: #45474B;
+  border-color: #45474B;
+}
+.anxious-button{
+  background-color: #45474B;
+  border-color: #9F0D7F;
+  color: white;
+}
+.anxious-button:hover{
+  background-color: #9F0D7F;
+  border-color: #9F0D7F;
+  color: white;
+}
+
+.anxious-button-submit:hover{
+  background-color: #45474B;
+  border-color: #9F0D7F;
+  color: white;
+}
+
+.anxious-button-submit{
+  background-color: #45474B;
+  border-color: #45474B;
+  color: white;
+}
+
+.anxious-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #45474B;
+  color: #9F0D7F;
+  border-color: #45474B;
+}
+
+.anxious-scroll-to-top-button:hover {
+  background-color: #45474B;
+  color: #9F0D7F;
+  border-color: #9F0D7F;
+}
+
+.anxious-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------------------------------*/
+
+
+/* calmed */
+body.calmed{
+  background-color: #95BDFF;
+}
+
+.calmed-card{
+  background-color: #EBE3D5;
+  color: black;
+}
+
+.calmed-custom-radio .form-check-input:checked {
+  background-color: #EBE3D5;
+  border-color: #EBE3D5;
+}
+.calmed-button{
+  background-color: #EBE3D5;
+  border-color: #95BDFF;
+  color: #95BDFF;
+}
+.calmed-button:hover{
+  background-color: #95BDFF;
+  border-color: #95BDFF;
+  color: white;
+}
+
+.calmed-button-submit:hover{
+  background-color: #EBE3D5;
+  border-color: #95BDFF;
+  color: white;
+}
+
+.calmed-button-submit{
+  background-color: #EBE3D5;
+  border-color: #EBE3D5;
+  color: #95BDFF;
+}
+
+.calmed-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #EBE3D5;
+  color: #95BDFF;
+  border-color: #EBE3D5;
+}
+
+.calmed-scroll-to-top-button:hover {
+  background-color: #EBE3D5;
+  color: #95BDFF;
+  border-color: #95BDFF;
+}
+
+.calmed-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/*--------------------------------*/
+
+/* confused */
+body.confused{
+  background-color: #5F6F52;
+}
+
+.confused-card{
+  background-color: #B0A695;
+  color: black;
+}
+
+.confused-custom-radio .form-check-input:checked {
+  background-color: #B0A695;
+  border-color: #B0A695;
+}
+.confused-button{
+  background-color: #B0A695;
+  border-color: #5F6F52;
+  color: #5F6F52;
+}
+.confused-button:hover{
+  background-color: #5F6F52;
+  border-color: #5F6F52;
+  color: #B0A695;
+}
+
+.confused-button-submit:hover{
+  background-color: #B0A695;
+  border-color: #5F6F52;
+  color: #5F6F52;
+}
+
+.confused-button-submit{
+  background-color: #B0A695;
+  border-color: #B0A695;
+  color: #5F6F52;
+}
+
+.confused-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #B0A695;
+  color: #5F6F52;
+  border-color: #B0A695;
+}
+
+.confused-scroll-to-top-button:hover {
+  background-color: #B0A695;
+  color: #5F6F52;
+  border-color: #5F6F52;
+}
+
+.confused-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*hopeful*/
+body.hopeful{
+  background-color: #EC8F5E;
+}
+
+.hopeful-card{
+  background-color: #FFE194;
+  color: #EC8F5E;
+}
+
+.hopeful-custom-radio .form-check-input:checked {
+  background-color: #FFE194;
+  border-color: #FFE194;
+}
+.hopeful-button{
+  background-color: #FFE194;
+  border-color: #EC8F5E;
+  color: #EC8F5E;
+}
+.hopeful-button:hover{
+  background-color: #EC8F5E;
+  border-color: #EC8F5E;
+  color: #FFE194;
+}
+
+.hopeful-button-submit:hover{
+  background-color: #FFE194;
+  border-color: #EC8F5E;
+  color: #EC8F5E;
+}
+
+.hopeful-button-submit{
+  background-color: #FFE194;
+  border-color: #FFE194;
+  color: #EC8F5E;
+}
+
+.hopeful-scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+  background-color: #FFE194;
+  color: #EC8F5E;
+  border-color: #FFE194;
+}
+
+.hopeful-scroll-to-top-button:hover {
+  background-color: #FFE194;
+  color: #EC8F5E;
+  border-color: #EC8F5E;
+}
+
+.hopeful-scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/*---------------------------------*/
+
+.scroll-to-top-button {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000; 
+  width: 50px; /* Beispielbreite */
+  height: 50px; /* Beispielhöhe */
+  border-radius: 50%; /* Macht den Button rund */
+}
+
+.scroll-to-top-button .material-symbols-outlined {
+  font-size: 2em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 

@@ -1,17 +1,28 @@
 import React from 'react';
+import { Card, Col, Container, Row} from 'react-bootstrap';
+
 
 export default function Track({ track }) {
   const { name, artist, length, internUrl, externUrl } = track;
 
   return (
-    <p className="returnTracks">
-      Song name: {name}
+    <div className='card-wrapper'>
+
+<Card className='card'>
+<Card.Body>
+  <Container className='container-card'>
+    <Row>
+      <Col >
+      <p className='playlist-p'> 
+      {name}
       <br />
       <br />
-      Artist: {artist}
+      </p>
+      <p className="returnTracks">
+      Artist: <span className="greenText">{artist}</span>
       <br />
       <br />
-      Length of song: {length}seconds
+      Length of song: <span className="greenText">{length }</span>
       <br />
       <br />
       Open in Spotify: <a href={internUrl}>{internUrl}</a>
@@ -20,8 +31,12 @@ export default function Track({ track }) {
       Open in browser: <a href={externUrl}>{externUrl}</a>
       <br />
       <br />
-      <br />
-      <br />
-    </p>
+      </p>
+      </Col>
+    </Row>
+  </Container>
+</Card.Body>
+</Card>
+</div>
   );
 }
