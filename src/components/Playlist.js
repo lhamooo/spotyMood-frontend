@@ -4,7 +4,7 @@ import alt from "../../src/black.png"
 
 
 export default function Playlist({ playlist, background }) {
-  const { name, songCount, internUrl, externUrl, coverImageUrl } = playlist;
+  const { name, songCount, internUrl, coverImageUrl } = playlist;
   const [imageError, setImageError] = useState(false);
 
   const handleImageError = () => {

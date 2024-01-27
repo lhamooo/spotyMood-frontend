@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import Playlist from './Playlist';
 import Track from './Track';
-import Logo from '../spotifyLogo.png';
 import {Button, Container, Form, Row, Col} from 'react-bootstrap';
 
 
