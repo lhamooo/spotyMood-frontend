@@ -43,7 +43,7 @@ export default function SpotifySearcher() {
 
   function handleSubmit() {
     setBackground(mood)
-    const apiUrl = `http://https://spotymood-backend.netlify.app/playlists?limit=${limit}&q=${mood}`;
+    const apiUrl = `https://spotymood-backend.netlify.app/playlists?limit=${limit}&q=${mood}`;
     axios.get(apiUrl).then((response) => {
       setResponse(response.data);
     });
