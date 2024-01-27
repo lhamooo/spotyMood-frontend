@@ -11,42 +11,29 @@ export default function Playlist({ playlist, background }) {
     setImageError(true);
   };
 
+  function kürzeTitel(titel, maxZeichen) {
+    if (titel.length > maxZeichen) {
+      // Zerlege den Titel in Wörter
+      const wörter = titel.split(' ');
+      // Überprüfe, ob die Länge des Titels mehr als maxZeichen ist
+      while (titel.length > maxZeichen) {
+        // Entferne das letzte Wort
+        wörter.pop();
+        // Setze den Titel neu, indem du die Wörter wieder zu einem String zusammenfügst
+        titel = wörter.join(' ');
+      }
+  
+      // Gib den gekürzten Titel zurück
+      return titel.trim(); // Entferne mögliche Leerzeichen am Anfang/Ende
+    }
+  
+    // Gib den ursprünglichen Titel zurück, falls er nicht gekürzt werden muss
+    return titel;
+  }
   
 
   return (
     <div>
-
-      {/* <Card className='card'>
-      <Card.Body>
-        <Container className='container-card'>
-          <Row>
-            <Col xs={3}>
-            <Image className="image-cover" id="image-cover" src={coverImageUrl} alt="Cover" rounded/>
-            </Col>
-
-            <Col xs={9}>
-            <p className='playlist-p'> 
-            {name}
-            <br />
-            <br />
-            </p>
-            <p className="returnPlaylists">
-            Number of songs: <span className="greenText">{songCount}</span>
-            <br />
-            Open in Spotify: <a href={internUrl}>{internUrl}</a>
-            <br />
-            <br />
-            Open in browser: <a href={externUrl}>{externUrl}</a>
-            <br />
-            <br />
-            </p>
-            </Col>
-          </Row>
-        </Container>
-      </Card.Body>
-    </Card>
-    */}
-
     <Card style={{ width: '18rem' }} className={`${background}-card`}>
     {imageError ? (
         <Card.Img
@@ -67,7 +54,7 @@ export default function Playlist({ playlist, background }) {
         />
       )}
       <Card.Body>
-        <Card.Title className='playlist-p'>{name}</Card.Title>
+        <Card.Title className='playlist-p'>{kürzeTitel(name, 19)}</Card.Title>
         <Card.Text>
 
         
@@ -80,10 +67,7 @@ export default function Playlist({ playlist, background }) {
         <Container>
           <Row>
             <Col>
-            <Button className={`${background}-button`} variant="light" href={internUrl}>spotify</Button>
-            </Col>
-            <Col>
-            <Button className={`${background}-button`} variant="light" href={internUrl}>browser</Button>
+            <Button className={`${background}-button`} variant="light" href={internUrl}>open in spotify</Button>
             </Col>
           </Row>
         </Container>

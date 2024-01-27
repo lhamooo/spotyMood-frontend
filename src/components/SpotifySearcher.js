@@ -37,14 +37,14 @@ export default function SpotifySearcher() {
       setType(value);
     }
     setLimit(50)
-    if (name === 'mood') {
+   if (name === 'mood') {
       setMood(value);
     }
   }
 
   function handleSubmit() {
     setBackground(mood)
-    const apiUrl = `http://localhost:8080/${type}?limit=${limit}&q=${mood}`;
+    const apiUrl = `http://localhost:8080/playlists?limit=${limit}&q=${mood}`;
     axios.get(apiUrl).then((response) => {
       setResponse(response.data);
     });
@@ -59,6 +59,7 @@ export default function SpotifySearcher() {
     if (type === TRACKS) {
       return renderTrack();
     }
+    renderPlaylist()
     return <p> You have to enter either "playlists" or "tracks"! </p>;
   }
 
@@ -114,26 +115,8 @@ export default function SpotifySearcher() {
       <option value="confused">Confused</option>
       <option value="hopeful">Hopeful</option>
     </Form.Select>
-      <br />
-
     
-      <Form className={`${background}-custom-radio d-flex justify-content-between`}> 
-        <Form.Check
-          type="radio"
-          label="Tracks"
-          name="type"
-          value="tracks"
-          onChange={handleChange}
-        />
-        <Form.Check
-          className="playlist-radio"
-          type="radio"
-          label="Playlists"
-          name="type"
-          value="playlists"
-          onChange={handleChange}
-        />
-      </Form>
+      
       <br />
         <Button className={`${background}-button-submit`} variant="light" value="Submit" onClick={handleSubmit}>Submit</Button>
       </Form>
